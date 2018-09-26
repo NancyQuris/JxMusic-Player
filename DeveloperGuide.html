@@ -165,6 +165,22 @@ Do not disable them. If you have disabled them, go to <code>File</code> &gt; <co
 <p>Open a console and run the command <code>gradlew processResources</code> (Mac/Linux: <code>./gradlew processResources</code>). It should finish with the <code>BUILD SUCCESSFUL</code> message.<br>
 This will generate all resources required by the application and tests.</p>
 </li>
+<li>
+<p>Open <a href="https://github.com/se-edu/addressbook-level4/tree/master/src/main/java/seedu/address/storage/XmlAdaptedPerson.java"><code>XmlAdaptedPerson.java</code></a> and <a href="https://github.com/se-edu/addressbook-level4/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow.java</code></a> and check for any code errors</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Due to an ongoing <a href="https://youtrack.jetbrains.com/issue/IDEA-189060">issue</a> with some of the newer versions of IntelliJ, code errors may be detected even if the project can be built and run successfully</p>
+</li>
+<li>
+<p>To resolve this, place your cursor over any of the code section highlighted in red. Press <span class="keyseq"><kbd>ALT</kbd>+<kbd>ENTER</kbd></span>, and select <code>Add '--add-modules=&#8230;&#8203;' to module compiler options</code> for each error</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Repeat this for the test folder as well (e.g. check <a href="https://github.com/se-edu/addressbook-level4/tree/master/src/test/java/seedu/address/commons/util/XmlUtilTest.java"><code>XmlUtilTest.java</code></a> and <a href="https://github.com/se-edu/addressbook-level4/tree/master/src/test/java/seedu/address/ui/HelpWindowTest.java"><code>HelpWindowTest.java</code></a> for code errors, and if so, resolve it the same way)</p>
+</li>
 </ol>
 </div>
 </div>
@@ -2045,25 +2061,42 @@ for <code>RemarkCommandParser</code>.</p>
 <h2 id="use-cases"><a class="link" href="#use-cases">Appendix D: Use Cases</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>(For all use cases below, the <strong>System</strong> is the <code>AddressBook</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
+<p>(For all use cases below, the <strong>System</strong> is the <code>JxMusic</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
 </div>
-<h3 id="use-case-delete-person" class="discrete">Use case: Delete person</h3>
+<h3 id="use-case-list-all-playlists" class="discrete">Use case: List all playlists</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to list persons</p>
+<p>User requests to list all the playlists.</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons</p>
+<p>System displays names of all playlists in the library.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="use-case-search-for-a-playlist" class="discrete">Use case: Search for a playlist</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User enters the command "search".</p>
 </li>
 <li>
-<p>User requests to delete a specific person in the list</p>
+<p>System displays "Enter playlist name:".</p>
 </li>
 <li>
-<p>AddressBook deletes the person</p>
+<p>User enters a sequence of characters.</p>
+</li>
+<li>
+<p>System displays all playlists that include the sequence of characters, in lexicographical order.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2076,19 +2109,50 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a. The list is empty.</p>
+<p>4a. There is no list matches the name.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>4a1. System displays "not found" message.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
 </li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-create-a-playlist" class="discrete">Use case: Create a playlist</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>3a. The given index is invalid.</p>
+<p>User requests to create a new playlist.</p>
+</li>
+<li>
+<p>System creates a new playlist and saves it to libaray.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>2a. The name of the playlist has existed.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. System displays an error message.</p>
 <div class="paragraph">
-<p>Use case resumes at step 2.</p>
+<p>Use case ends.</p>
 </div>
 </li>
 </ul>
@@ -2096,8 +2160,454 @@ for <code>RemarkCommandParser</code>.</p>
 </li>
 </ul>
 </div>
+<h3 id="use-case-delete-a-playlist" class="discrete">Use case: Delete a playlist</h3>
 <div class="paragraph">
-<p><em>{More to be added}</em></p>
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests delete a playlist.</p>
+</li>
+<li>
+<p>System deletes the playlist.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. Playlist not found.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. System displays an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2b. Playlist is currently being played.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. System stops the playing and deletes the playlist.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-add-a-track-into-playlist" class="discrete">Use case: Add a track into playlist</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User enters commands to add a track into a playlist.</p>
+</li>
+<li>
+<p>System searches for the track.</p>
+</li>
+<li>
+<p>System searches for the playlist.</p>
+</li>
+<li>
+<p>System adds the track to the playlist.</p>
+</li>
+<li>
+<p>System displays successful message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The track does not exist.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. System displays error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The playlist does not exist.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. System displays error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-delete-a-track-from-playlist" class="discrete">Use case: Delete a track from playlist</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User enters commands to delete a track from a playlist.</p>
+</li>
+<li>
+<p>System deletes the track.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The track does not exist.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. System displays error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-play-a-track" class="discrete">Use case: Play a track</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to play.</p>
+</li>
+<li>
+<p>System plays the current track.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. No track in current playlist.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. System goes back to the status before step 1.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-play-a-playlist" class="discrete">Use case: Play a playlist</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to play tracks in a playlist.</p>
+</li>
+<li>
+<p>System searches for the playlist.</p>
+</li>
+<li>
+<p>System plays the tracks of the playlist.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The playlist is not found.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. System displays an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The playlist is empty.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-pause-the-playing-of-track-and-resume-the-play" class="discrete">Use case: Pause the playing of track and resume the play</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to pause the playing of track.</p>
+</li>
+<li>
+<p>System pauses the playing.</p>
+</li>
+<li>
+<p>User requests to resume the playing of track.</p>
+</li>
+<li>
+<p>System plays the track from the point it was paused.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="use-case-stop-the-playing-of-track" class="discrete">Use case: Stop the playing of track</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to stop the playing of track</p>
+</li>
+<li>
+<p>System exits the playing of track.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="use-case-seek-time-point-in-a-track" class="discrete">Use case: Seek time point in a track</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to seek the play timeline to a certain point.</p>
+</li>
+<li>
+<p>System jumps to the point and play from the point.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The time point is outside the range of timeline.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. System displays an error message and pauses current playing.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-step-forward-backward-in-a-track" class="discrete">Use case: Step forward/backward in a track</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to step forward/backwards a range of time in the playing of current track.</p>
+</li>
+<li>
+<p>System jumps to the point and plays from the point.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The time point is outside the range of timeline.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. System displays an error message and pauses current playing.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-replay-a-track" class="discrete">Use case: Replay a track</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to replay the track.</p>
+</li>
+<li>
+<p>System plays the track from the beginning.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="use-case-navigate-playlist" class="discrete">Use case: Navigate playlist</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User enters commands to skip the next/previous track.</p>
+</li>
+<li>
+<p>System goes to the next/previous track and play the track.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The next/previous track does not exist.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. If "repeat playlist" function is on, system goes to the beginning/ending track of the playlist and plays the track.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+<div class="paragraph">
+<p>2a2. If "repeat playlist" is off, system pauses current playing.</p>
+</div>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-switch-playing-modes" class="discrete">Use case: Switch playing modes</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to repeat track.</p>
+</li>
+<li>
+<p>System changes to "repeat track" mode and current track will be played repeatly.</p>
+</li>
+<li>
+<p>User requests to repeat playlist.</p>
+</li>
+<li>
+<p>System changes to "repeat playlist" mode and the current playlist will start over after playing all tracks.</p>
+</li>
+<li>
+<p>User enters the repeat off command.</p>
+</li>
+<li>
+<p>System changes to "repeat off" mode and the playlist will stop after playing all the tracks.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="use-case-shuffle-playlist" class="discrete">Use case: Shuffle playlist</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests shuffle the playlist.</p>
+</li>
+<li>
+<p>System randomly reorders the sequence of tracks inside the playlist.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -2285,4 +2795,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-03 07:12:38 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-26 14:42:00 UTC</div></div></div></body></html>
