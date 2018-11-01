@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>AddressBook Level 4 - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>JxMusic - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">JxMusic</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S1-T13-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>AddressBook Level 4 - User Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">JxMusic</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S1-T13-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>JxMusic - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>CS2103-AY1819S1-T13-3</code>      Since: <code>Aug 2018</code>      Licence: <code>MIT</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -15,33 +15,42 @@
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
 <li><a href="#listing-all-playlists-code-playlist-list-code">3.2. Listing all playlists : <code>playlist list</code></a></li>
-<li><a href="#searching-for-a-playlist-code-playlist-search-code">3.3. Searching for a playlist : <code>playlist search</code></a></li>
-<li><a href="#creating-a-playlist-code-playlist-new-code">3.4. Creating a playlist : <code>playlist new</code></a></li>
-<li><a href="#deleting-a-playlist-code-playlist-del-code">3.5. Deleting a playlist : <code>playlist del</code></a></li>
-<li><a href="#adding-a-track-into-a-playlist-code-track-add-code">3.6. Adding a track into a playlist : <code>track add</code></a></li>
-<li><a href="#deleting-a-track-from-a-playlist-code-track-del-code">3.7. Deleting a track from a playlist : <code>track del</code></a></li>
-<li><a href="#playing-a-track-code-play-t-code">3.8. Playing a track : <code>play t/</code></a></li>
-<li><a href="#playing-a-playlist-code-play-p-code">3.9. Playing a playlist : <code>play p/</code></a></li>
-<li><a href="#pausing-a-playing-track-code-pause-code">3.10. Pausing a playing track : <code>pause</code></a></li>
-<li><a href="#continuing-a-paused-track-code-play-code">3.11. Continuing a paused track : <code>play</code></a></li>
-<li><a href="#stopping-a-play-code-stop-code">3.12. Stopping a play : <code>stop</code></a></li>
-<li><a href="#seeking-time-point-code-seek-code">3.13. Seeking time point : <code>seek</code></a></li>
-<li><a href="#stepping-a-track-code-step-code">3.14. Stepping a track : <code>step</code></a></li>
-<li><a href="#stepping-back-code-stepback-code">3.15. Stepping back : <code>stepback</code></a></li>
-<li><a href="#replay-a-track-code-replay-code">3.16. Replay a track : <code>replay</code></a></li>
-<li><a href="#skipping-to-the-next-track-code-next-code">3.17. Skipping to the next track : <code>next</code></a></li>
-<li><a href="#skipping-to-the-previous-track-code-prev-code">3.18. Skipping to the previous track : <code>prev</code></a></li>
-<li><a href="#repeatedly-playing-a-track-code-repeat-track-code">3.19. Repeatedly playing a track : <code>repeat track</code></a></li>
-<li><a href="#repeatedly-playing-a-playlist-code-repeat-playlist-code">3.20. Repeatedly playing a playlist : <code>repeat playlist</code></a></li>
-<li><a href="#turning-off-repeat-mode-code-repeat-off-code">3.21. Turning off repeat mode : <code>repeat off</code></a></li>
-<li><a href="#shuffling-a-playlist-code-shuffle-code">3.22. Shuffling a playlist : <code>shuffle</code></a></li>
-<li><a href="#turning-off-shuffle-mode-code-shuffle-off-code">3.23. Turning off shuffle mode : <code>shuffle off</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.24. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.25. Exiting the program : <code>exit</code></a></li>
+<li><a href="#listing-all-tracks-code-track-list-code">3.3. Listing all tracks : <code>track list</code></a></li>
+<li><a href="#searching-for-a-playlist-code-playlist-search-code">3.4. Searching for a playlist : <code>playlist search</code></a></li>
+<li><a href="#searching-for-a-track-code-track-search-code">3.5. Searching for a track : <code>track search</code></a></li>
+<li><a href="#creating-a-playlist-code-playlist-new-code">3.6. Creating a playlist : <code>playlist new</code></a></li>
+<li><a href="#deleting-a-playlist-code-playlist-del-code">3.7. Deleting a playlist : <code>playlist del</code></a></li>
+<li><a href="#adding-a-track-into-a-playlist-code-track-add-code">3.8. Adding a track into a playlist : <code>track add</code></a></li>
+<li><a href="#deleting-a-track-from-a-playlist-code-track-del-code">3.9. Deleting a track from a playlist : <code>track del</code></a></li>
+<li><a href="#playing-a-track-code-play-t-code">3.10. Playing a track : <code>play t/</code></a></li>
+<li><a href="#playing-a-playlist-code-play-p-code">3.11. Playing a playlist : <code>play p/</code></a></li>
+<li><a href="#pausing-a-playing-track-code-pause-code">3.12. Pausing a playing track : <code>pause</code></a></li>
+<li><a href="#continuing-a-paused-track-code-play-code">3.13. Continuing a paused track : <code>play</code></a></li>
+<li><a href="#stopping-a-play-code-stop-code">3.14. Stopping a play : <code>stop</code></a></li>
+<li><a href="#seeking-time-point-code-seek-code">3.15. Seeking time point : <code>seek</code></a></li>
+<li><a href="#stepping-a-track-code-step-code">3.16. Stepping a track : <code>step</code></a></li>
+<li><a href="#stepping-back-code-stepback-code">3.17. Stepping back : <code>stepback</code></a></li>
+<li><a href="#replay-a-track-code-replay-code">3.18. Replay a track : <code>replay</code></a></li>
+<li><a href="#skipping-to-the-next-track-code-next-code">3.19. Skipping to the next track : <code>next</code></a></li>
+<li><a href="#skipping-to-the-previous-track-code-prev-code">3.20. Skipping to the previous track : <code>prev</code></a></li>
+<li><a href="#repeatedly-playing-a-track-code-repeat-track-code">3.21. Repeatedly playing a track : <code>repeat track</code></a></li>
+<li><a href="#repeatedly-playing-a-playlist-code-repeat-playlist-code">3.22. Repeatedly playing a playlist : <code>repeat playlist</code></a></li>
+<li><a href="#turning-off-repeat-mode-code-repeat-off-code">3.23. Turning off repeat mode : <code>repeat off</code></a></li>
+<li><a href="#shuffling-a-playlist-code-shuffle-code">3.24. Shuffling a playlist : <code>shuffle</code></a></li>
+<li><a href="#turning-off-shuffle-mode-code-shuffle-off-code">3.25. Turning off shuffle mode : <code>shuffle off</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.26. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.27. Exiting the program : <code>exit</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
-<li><a href="#command-summary">5. Command Summary</a></li>
+<li><a href="#command-summary">5. Command Summary</a>
+<ul class="sectlevel2">
+<li><a href="#commands-for-controlling-playback">5.1. Commands for controlling playback</a></li>
+<li><a href="#commands-for-controlling-sequence-of-playback">5.2. Commands for controlling sequence of playback</a></li>
+<li><a href="#commands-for-managing-playlists-in-library">5.3. Commands for managing playlists in library</a></li>
+<li><a href="#commands-for-managing-tracks-in-playlist">5.4. Commands for managing tracks in playlist</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -49,7 +58,7 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook Level 4 (AB4) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB4 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB4 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>JxMusic is for those who <strong>prefer to use a desktop app for listening to music</strong>. More importantly, JxMusic is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, JxMusci can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
 </div>
 </div>
 </div>
@@ -62,16 +71,38 @@
 <p>Ensure you have Java version <code>9</code> or later installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/CS2103-AY1819S1-T13-3/main/releases">here</a>.</p>
+<p>Download the latest <code>jxmusic.jar</code> <a href="https://github.com/CS2103-AY1819S1-T13-3/main/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
+<p>Copy the file to the folder you want to use as the home folder for your JxMusic player.</p>
 </li>
 <li>
-<p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
+<p>Open a terminal in the folder, enter the command <code>java -jar jxmusic.jar</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command should generate a <code>library</code> folder next to the jar file containing several sample mp3 files.</p>
+</li>
+<li>
+<p>Otherwise, enter <code>unzip jxmusic.jar "library/*"</code></p>
+</li>
+<li>
+<p>Alternatively, download the library.zip file and unzip it next to the jar.</p>
+</li>
+<li>
+<p>Ensure that you have the library folder with the sample mp3 files otherwise jxmusic won&#8217;t start.</p>
+</li>
+<li>
+<p>Then run <code>java -jar jxmusic.jar</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The GUI should appear in a few seconds.</p>
 <div class="imageblock">
 <div class="content">
-<img src="images/Ui.png" alt="Ui" width="790">
+<img src="images/Ui%20latest.png" alt="Ui latest" width="790">
 </div>
 </div>
 </li>
@@ -80,17 +111,17 @@
 e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
 </li>
 <li>
-<p>Some example commands you can try:</p>
+<p>Some example commands you can try with build-in tracks and playlists:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
+<p><strong><code>playlist list</code></strong> : lists all playlists</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
+<p><strong><code>playlist new</code></strong><code>p/playlist1 t/Marbles</code> : creates a new playlist named <code>playlist1</code> with mp3 file <code>Marbles.mp3</code> to the JxMusic Player.</p>
 </li>
 <li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
+<p><strong><code>playlist play</code></strong><code>p/playlist1</code> : plays the <code>playlist1</code></p>
 </li>
 <li>
 <p><strong><code>exit</code></strong> : exits the app</p>
@@ -101,7 +132,66 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <li>
 <p>Refer to <a href="#Features">Section 3, &#8220;Features&#8221;</a> for details of each command.</p>
 </li>
+<li>
+<p>To add the new tracks to the library, add the mp3 files to the <code>library</code> folder.</p>
+</li>
+<li>
+<p>Restart the file so that your new tracks could be scanned and showed in UI.</p>
+</li>
 </ol>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>List of currently working commands as of v1.3</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>help</code></p>
+</li>
+<li>
+<p><code>playlist list</code></p>
+</li>
+<li>
+<p><code>playlist search</code></p>
+</li>
+<li>
+<p><code>playlist new</code></p>
+</li>
+<li>
+<p><code>playlist del</code></p>
+</li>
+<li>
+<p><code>track list</code></p>
+</li>
+<li>
+<p><code>track search</code></p>
+</li>
+<li>
+<p><code>play t/</code></p>
+</li>
+<li>
+<p><code>play p/</code></p>
+</li>
+<li>
+<p><code>pause</code></p>
+</li>
+<li>
+<p><code>play</code></p>
+</li>
+<li>
+<p><code>stop</code></p>
+</li>
+<li>
+<p><code>clear</code></p>
+</li>
+<li>
+<p><code>exit</code></p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -116,16 +206,10 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
+<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>playlist new p/PLAYLIST</code>, <code>PLAYLIST</code> is a parameter which can be used as <code>playlist new p/playlist1</code>.</p>
 </li>
 <li>
-<p>Items in square brackets are optional e.g <code>n/NAME [t/TAG]</code> can be used as <code>n/John Doe t/friend</code> or as <code>n/John Doe</code>.</p>
-</li>
-<li>
-<p>Items with <code>…</code>​ after them can be used multiple times including zero times e.g. <code>[t/TAG]&#8230;&#8203;</code> can be used as <code>&#160;</code> (i.e. 0 times), <code>t/friend</code>, <code>t/friend t/family</code> etc.</p>
-</li>
-<li>
-<p>Parameters can be in any order e.g. if the command specifies <code>n/NAME p/PHONE_NUMBER</code>, <code>p/PHONE_NUMBER n/NAME</code> is also acceptable.</p>
+<p>Items in square brackets are optional e.g <code>stepback [s/SECONDS]</code> can be used as <code>stepback</code> or as <code>stepback s/20</code>.</p>
 </li>
 </ul>
 </div>
@@ -140,15 +224,22 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="sect2">
 <h3 id="listing-all-playlists-code-playlist-list-code"><a class="link" href="#listing-all-playlists-code-playlist-list-code">3.2. Listing all playlists : <code>playlist list</code></a></h3>
 <div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
+<p>Shows a list of all playlists in the library.<br>
 Format: <code>playlist list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="searching-for-a-playlist-code-playlist-search-code"><a class="link" href="#searching-for-a-playlist-code-playlist-search-code">3.3. Searching for a playlist : <code>playlist search</code></a></h3>
+<h3 id="listing-all-tracks-code-track-list-code"><a class="link" href="#listing-all-tracks-code-track-list-code">3.3. Listing all tracks : <code>track list</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all tracks in the library.<br>
+Format: <code>track list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="searching-for-a-playlist-code-playlist-search-code"><a class="link" href="#searching-for-a-playlist-code-playlist-search-code">3.4. Searching for a playlist : <code>playlist search</code></a></h3>
 <div class="paragraph">
 <p>Searches for playlists by names.<br>
-Format: <code>playlist search q/QUERY</code></p>
+Format: <code>playlist search QUERY</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -167,24 +258,24 @@ Format: <code>playlist search q/QUERY</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>playlist search q/Fav</code><br>
+<p><code>playlist search Fav</code><br>
 Searches for playlists that has Fav in their names.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-a-playlist-code-playlist-new-code"><a class="link" href="#creating-a-playlist-code-playlist-new-code">3.4. Creating a playlist : <code>playlist new</code></a></h3>
+<h3 id="searching-for-a-track-code-track-search-code"><a class="link" href="#searching-for-a-track-code-track-search-code">3.5. Searching for a track : <code>track search</code></a></h3>
 <div class="paragraph">
-<p>Creates a new empty playlist and saves it into the library.<br>
-Format: <code>playlist new p/PLAYLIST</code></p>
+<p>Searches for tracks by names.<br>
+Format: <code>track search QUERY</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p><code>PLAYLIST</code> refers to the playlist’s name.</p>
+<p><code>QUERY</code> is a string to be searched from the names of the tracks, which doesn’t need to be an exact match.</p>
 </li>
 </ul>
 </div>
@@ -196,24 +287,56 @@ Format: <code>playlist new p/PLAYLIST</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>playlist new p/Favourites</code><br>
-Creates a new playlist with the name Favourites.</p>
+<p><code>track search aliez</code><br>
+Searches for tracks that has aliez in their names.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-playlist-code-playlist-del-code"><a class="link" href="#deleting-a-playlist-code-playlist-del-code">3.5. Deleting a playlist : <code>playlist del</code></a></h3>
+<h3 id="creating-a-playlist-code-playlist-new-code"><a class="link" href="#creating-a-playlist-code-playlist-new-code">3.6. Creating a playlist : <code>playlist new</code></a></h3>
+<div class="paragraph">
+<p>Creates a new playlist with specific tracks and saves it into the library.<br>
+Format: <code>playlist new p/PLAYLIST [t/TRACK]&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>PLAYLIST</code> refers to the playlist’s name.</p>
+</li>
+<li>
+<p><code>TRACK</code> refers to the track’s name.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>playlist new p/Favourites t/Some Song t/Some Song 2</code><br>
+Creates a new playlist with the name Favourites and adds the tracks named Some Song and Some Song 2.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-playlist-code-playlist-del-code"><a class="link" href="#deleting-a-playlist-code-playlist-del-code">3.7. Deleting a playlist : <code>playlist del</code></a></h3>
 <div class="paragraph">
 <p>Removes an existing playlist from the library. If the playlist is currently playing, it will stop and the playlist will be removed.<br>
-Format: <code>playlist del p/PLAYLIST</code></p>
+Format: <code>playlist del INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p><code>PLAYLIST</code> refers to the playlist’s name.</p>
+<p><code>INDEX</code> refers to the playlist’s index in the playlist panel.</p>
 </li>
 </ul>
 </div>
@@ -225,14 +348,14 @@ Format: <code>playlist del p/PLAYLIST</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>playlist del p/Favourites</code><br>
-Deletes the playlist named "Favourites" if it exists.</p>
+<p><code>playlist del 1</code><br>
+Deletes the first playlist in the panel if it exists.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-track-into-a-playlist-code-track-add-code"><a class="link" href="#adding-a-track-into-a-playlist-code-track-add-code">3.6. Adding a track into a playlist : <code>track add</code></a></h3>
+<h3 id="adding-a-track-into-a-playlist-code-track-add-code"><a class="link" href="#adding-a-track-into-a-playlist-code-track-add-code">3.8. Adding a track into a playlist : <code>track add</code></a></h3>
 <div class="paragraph">
 <p>Adds a track into a playlist. The command will update the PLAYLIST even if it is currently playing. So the added track will be played after its previous track finishes playing.<br>
 Format: <code>track add p/PLAYLIST t/TRACK</code></p>
@@ -264,10 +387,10 @@ Adds the track named "Some Song.mp3" to the "Favourites" playlist.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-track-from-a-playlist-code-track-del-code"><a class="link" href="#deleting-a-track-from-a-playlist-code-track-del-code">3.7. Deleting a track from a playlist : <code>track del</code></a></h3>
+<h3 id="deleting-a-track-from-a-playlist-code-track-del-code"><a class="link" href="#deleting-a-track-from-a-playlist-code-track-del-code">3.9. Deleting a track from a playlist : <code>track del</code></a></h3>
 <div class="paragraph">
 <p>Removes a track from a playlist. The command will update the PLAYLIST even if it is currently playing. So the deleted track will not be played after its previous track finishes playing.<br>
-Format: <code>track del p/PLAYLIST i/INDEX</code></p>
+Format: <code>track del p/PLAYLIST INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -289,14 +412,14 @@ Format: <code>track del p/PLAYLIST i/INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>track del p/Favourites i/3</code><br>
+<p><code>track del p/Favourites 3</code><br>
 Deletes the 3rd track in "Favourites" playlist.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="playing-a-track-code-play-t-code"><a class="link" href="#playing-a-track-code-play-t-code">3.8. Playing a track : <code>play t/</code></a></h3>
+<h3 id="playing-a-track-code-play-t-code"><a class="link" href="#playing-a-track-code-play-t-code">3.10. Playing a track : <code>play t/</code></a></h3>
 <div class="paragraph">
 <p>Plays a track. If there is a playlist or track playing, it will be stopped and the track will be played.<br>
 Format: <code>play t/[TRACK]</code></p>
@@ -332,7 +455,7 @@ Plays the track named "Some Song.mp3" if it exists in the library folder.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="playing-a-playlist-code-play-p-code"><a class="link" href="#playing-a-playlist-code-play-p-code">3.9. Playing a playlist : <code>play p/</code></a></h3>
+<h3 id="playing-a-playlist-code-play-p-code"><a class="link" href="#playing-a-playlist-code-play-p-code">3.11. Playing a playlist : <code>play p/</code></a></h3>
 <div class="paragraph">
 <p>Plays a playlist. Similarly to playing a track, if there is a playlist or track playing, it will be stopped and the playlist will be played.<br>
 Format: <code>play p/[PLAYLIST]</code></p>
@@ -368,7 +491,7 @@ Plays the playlist named "Favourites" if it exists in the library folder.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="pausing-a-playing-track-code-pause-code"><a class="link" href="#pausing-a-playing-track-code-pause-code">3.10. Pausing a playing track : <code>pause</code></a></h3>
+<h3 id="pausing-a-playing-track-code-pause-code"><a class="link" href="#pausing-a-playing-track-code-pause-code">3.12. Pausing a playing track : <code>pause</code></a></h3>
 <div class="paragraph">
 <p>Pauses a playing track.<br>
 Format: <code>pause</code></p>
@@ -387,7 +510,7 @@ The track is paused.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="continuing-a-paused-track-code-play-code"><a class="link" href="#continuing-a-paused-track-code-play-code">3.11. Continuing a paused track : <code>play</code></a></h3>
+<h3 id="continuing-a-paused-track-code-play-code"><a class="link" href="#continuing-a-paused-track-code-play-code">3.13. Continuing a paused track : <code>play</code></a></h3>
 <div class="paragraph">
 <p>Continues a paused track.<br>
 Format: <code>play</code></p>
@@ -407,7 +530,7 @@ Format: <code>play</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="stopping-a-play-code-stop-code"><a class="link" href="#stopping-a-play-code-stop-code">3.12. Stopping a play : <code>stop</code></a></h3>
+<h3 id="stopping-a-play-code-stop-code"><a class="link" href="#stopping-a-play-code-stop-code">3.14. Stopping a play : <code>stop</code></a></h3>
 <div class="paragraph">
 <p>Stops the track from playing.<br>
 Format: <code>stop</code></p>
@@ -427,7 +550,7 @@ The playlist stops playing and replays from the first track.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="seeking-time-point-code-seek-code"><a class="link" href="#seeking-time-point-code-seek-code">3.13. Seeking time point : <code>seek</code></a></h3>
+<h3 id="seeking-time-point-code-seek-code"><a class="link" href="#seeking-time-point-code-seek-code">3.15. Seeking time point : <code>seek</code></a></h3>
 <div class="paragraph">
 <p>Steps to the specified time point of the current track.<br>
 Format: <code>seek t/TIME</code></p>
@@ -484,7 +607,7 @@ If <code>TIME</code> is longer than the song duration, the seek command fails.</
 </div>
 </div>
 <div class="sect2">
-<h3 id="stepping-a-track-code-step-code"><a class="link" href="#stepping-a-track-code-step-code">3.14. Stepping a track : <code>step</code></a></h3>
+<h3 id="stepping-a-track-code-step-code"><a class="link" href="#stepping-a-track-code-step-code">3.16. Stepping a track : <code>step</code></a></h3>
 <div class="paragraph">
 <p>Steps forward by default 10 seconds or specified time in seconds.<br>
 Format: <code>step [s/SECONDS]</code></p>
@@ -527,7 +650,7 @@ Using negative value for <code>SECONDS</code> will apply the same behaviour as <
 </div>
 </div>
 <div class="sect2">
-<h3 id="stepping-back-code-stepback-code"><a class="link" href="#stepping-back-code-stepback-code">3.15. Stepping back : <code>stepback</code></a></h3>
+<h3 id="stepping-back-code-stepback-code"><a class="link" href="#stepping-back-code-stepback-code">3.17. Stepping back : <code>stepback</code></a></h3>
 <div class="paragraph">
 <p>Steps back by default 10 seconds or specified time in seconds.<br>
 Format: <code>stepback [s/SECONDS]</code></p>
@@ -570,7 +693,7 @@ Using negative value for <code>SECONDS</code> will apply the same behaviour as <
 </div>
 </div>
 <div class="sect2">
-<h3 id="replay-a-track-code-replay-code"><a class="link" href="#replay-a-track-code-replay-code">3.16. Replay a track : <code>replay</code></a></h3>
+<h3 id="replay-a-track-code-replay-code"><a class="link" href="#replay-a-track-code-replay-code">3.18. Replay a track : <code>replay</code></a></h3>
 <div class="paragraph">
 <p>Replays a track before the track ends to start from the beginning.<br>
 Format: <code>replay</code></p>
@@ -590,7 +713,7 @@ The track plays from the beginning.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="skipping-to-the-next-track-code-next-code"><a class="link" href="#skipping-to-the-next-track-code-next-code">3.17. Skipping to the next track : <code>next</code></a></h3>
+<h3 id="skipping-to-the-next-track-code-next-code"><a class="link" href="#skipping-to-the-next-track-code-next-code">3.19. Skipping to the next track : <code>next</code></a></h3>
 <div class="paragraph">
 <p>Plays the next track.<br>
 Format: <code>next</code></p>
@@ -628,7 +751,7 @@ Go to the next track. Since <code>shuffle</code> and <code>repeat playlist</code
 </div>
 </div>
 <div class="sect2">
-<h3 id="skipping-to-the-previous-track-code-prev-code"><a class="link" href="#skipping-to-the-previous-track-code-prev-code">3.18. Skipping to the previous track : <code>prev</code></a></h3>
+<h3 id="skipping-to-the-previous-track-code-prev-code"><a class="link" href="#skipping-to-the-previous-track-code-prev-code">3.20. Skipping to the previous track : <code>prev</code></a></h3>
 <div class="paragraph">
 <p>Plays the previous track.<br>
 Format: <code>prev</code></p>
@@ -666,7 +789,7 @@ Go to the previous track. Since <code>shuffle</code> and <code>repeat playlist</
 </div>
 </div>
 <div class="sect2">
-<h3 id="repeatedly-playing-a-track-code-repeat-track-code"><a class="link" href="#repeatedly-playing-a-track-code-repeat-track-code">3.19. Repeatedly playing a track : <code>repeat track</code></a></h3>
+<h3 id="repeatedly-playing-a-track-code-repeat-track-code"><a class="link" href="#repeatedly-playing-a-track-code-repeat-track-code">3.21. Repeatedly playing a track : <code>repeat track</code></a></h3>
 <div class="paragraph">
 <p>Switches the repeat mode to repeatedly play a single track. The command works even without any track playing. Upon running this command, any subsequent track will be played on repeat.<br>
 Format: <code>repeat track</code></p>
@@ -696,7 +819,7 @@ The first track of the “Favourites” playlist will play on repeat.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="repeatedly-playing-a-playlist-code-repeat-playlist-code"><a class="link" href="#repeatedly-playing-a-playlist-code-repeat-playlist-code">3.20. Repeatedly playing a playlist : <code>repeat playlist</code></a></h3>
+<h3 id="repeatedly-playing-a-playlist-code-repeat-playlist-code"><a class="link" href="#repeatedly-playing-a-playlist-code-repeat-playlist-code">3.22. Repeatedly playing a playlist : <code>repeat playlist</code></a></h3>
 <div class="paragraph">
 <p>Switches the repeat mode to repeatedly play a single playlist. The command works even without any playlist playing. Upon running this command, any subsequent playlist will be played on repeat.<br>
 Format: <code>repeat playlist</code></p>
@@ -726,7 +849,7 @@ Switches to repeat playlist mode. “Favourites” will play on repeat.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="turning-off-repeat-mode-code-repeat-off-code"><a class="link" href="#turning-off-repeat-mode-code-repeat-off-code">3.21. Turning off repeat mode : <code>repeat off</code></a></h3>
+<h3 id="turning-off-repeat-mode-code-repeat-off-code"><a class="link" href="#turning-off-repeat-mode-code-repeat-off-code">3.23. Turning off repeat mode : <code>repeat off</code></a></h3>
 <div class="paragraph">
 <p>Turns off the repeat mode<br>
 Format: <code>repeat off</code></p>
@@ -746,7 +869,7 @@ Switches off repeating mode.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="shuffling-a-playlist-code-shuffle-code"><a class="link" href="#shuffling-a-playlist-code-shuffle-code">3.22. Shuffling a playlist : <code>shuffle</code></a></h3>
+<h3 id="shuffling-a-playlist-code-shuffle-code"><a class="link" href="#shuffling-a-playlist-code-shuffle-code">3.24. Shuffling a playlist : <code>shuffle</code></a></h3>
 <div class="paragraph">
 <p>Switches on shuffle mode to play tracks in random order.<br>
 Format: <code>shuffle</code></p>
@@ -791,7 +914,7 @@ The track being repeated will continue to play until <code>repeat off</code> onl
 </div>
 </div>
 <div class="sect2">
-<h3 id="turning-off-shuffle-mode-code-shuffle-off-code"><a class="link" href="#turning-off-shuffle-mode-code-shuffle-off-code">3.23. Turning off shuffle mode : <code>shuffle off</code></a></h3>
+<h3 id="turning-off-shuffle-mode-code-shuffle-off-code"><a class="link" href="#turning-off-shuffle-mode-code-shuffle-off-code">3.25. Turning off shuffle mode : <code>shuffle off</code></a></h3>
 <div class="paragraph">
 <p>Turns off the shuffle mode<br>
 Format: <code>shuffle off</code></p>
@@ -811,14 +934,14 @@ Switches off shuffling mode.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.24. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.26. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
+<p>Clears all entries from the library.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.25. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.27. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
@@ -831,54 +954,121 @@ Format: <code>exit</code></p>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.</p>
+<strong>A</strong>: Install the app in the other computer and overwrite the <code>library</code> folder it creates with the file that contains the data of your previous <code>library</code> folder.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="command-summary"><a class="link" href="#command-summary">5. Command Summary</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="commands-for-controlling-playback"><a class="link" href="#commands-for-controlling-playback">5.1. Commands for controlling playback</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
+<p><strong>Play track</strong> : <code>play t/[TRACK]</code></p>
 </li>
 <li>
-<p><strong>Clear</strong> : <code>clear</code></p>
+<p><strong>Play playlist</strong> : <code>play p/[PLAYLIST]</code></p>
 </li>
 <li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
+<p><strong>Pause track</strong> : <code>pause</code></p>
 </li>
 <li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
+<p><strong>Continue track</strong> : <code>play</code></p>
 </li>
 <li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
+<p><strong>Stop playing</strong> : <code>stop</code></p>
 </li>
 <li>
-<p><strong>List</strong> : <code>list</code></p>
+<p><strong>Seek time point</strong> : <code>seek t/TIME</code><br>
+eg. <code>seek t/01:10</code></p>
 </li>
 <li>
-<p><strong>Help</strong> : <code>help</code></p>
+<p><strong>Step</strong> : <code>step [s/SECONDS]</code><br>
+eg. <code>step s/100</code></p>
 </li>
 <li>
-<p><strong>Select</strong> : <code>select INDEX</code><br>
-e.g.<code>select 2</code></p>
+<p><strong>Stepback</strong> : <code>stepback [s/SECONDS]</code><br>
+eg. <code>stepback s/100</code></p>
 </li>
 <li>
-<p><strong>History</strong> : <code>history</code></p>
-</li>
-<li>
-<p><strong>Undo</strong> : <code>undo</code></p>
-</li>
-<li>
-<p><strong>Redo</strong> : <code>redo</code></p>
+<p><strong>Replay</strong> : <code>replay</code></p>
 </li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-05 12:09:06 UTC</div></div></div></body></html>
+<div class="sect2">
+<h3 id="commands-for-controlling-sequence-of-playback"><a class="link" href="#commands-for-controlling-sequence-of-playback">5.2. Commands for controlling sequence of playback</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Skip to next track</strong> : <code>next</code></p>
+</li>
+<li>
+<p><strong>Skip to previous track</strong> : <code>prev</code></p>
+</li>
+<li>
+<p><strong>Repeat track</strong> : <code>repeat track</code></p>
+</li>
+<li>
+<p><strong>Repeat playlist</strong> : <code>repeat playlist</code></p>
+</li>
+<li>
+<p><strong>Turn off repeat mode</strong> : <code>repeat off</code></p>
+</li>
+<li>
+<p><strong>Shuffle playlist</strong> : <code>shuffle</code></p>
+</li>
+<li>
+<p><strong>Turn off shuffle mode</strong> : <code>shuffle off</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="commands-for-managing-playlists-in-library"><a class="link" href="#commands-for-managing-playlists-in-library">5.3. Commands for managing playlists in library</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>List all playlists</strong> : <code>playlist list</code></p>
+</li>
+<li>
+<p><strong>Search for playlist</strong> : <code>playlist search QUERY</code><br>
+eg. <code>playlist search Fav</code></p>
+</li>
+<li>
+<p><strong>Create playlist</strong> : <code>playlist new p/PLAYLIST [t/TRACK]&#8230;&#8203;</code><br>
+eg. <code>playlist new p/Favourites t/Some Song t/Some Song 2</code></p>
+</li>
+<li>
+<p><strong>Delete playlist</strong> : <code>playlist del INDEX</code><br>
+eg. <code>playlist del INDEX</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="commands-for-managing-tracks-in-playlist"><a class="link" href="#commands-for-managing-tracks-in-playlist">5.4. Commands for managing tracks in playlist</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Add track to playlist</strong> : <code>track add p/PLAYLIST t/TRACK</code><br>
+eg. <code>track add p/Favourites t/Some Song.mp3</code></p>
+</li>
+<li>
+<p><strong>Delete track from playlist</strong> : <code>track del p/PLAYLIST INDEX</code><br>
+eg. <code>track del p/Favourites 1</code></p>
+</li>
+<li>
+<p><strong>List all tracks</strong> : <code>track list</code></p>
+</li>
+<li>
+<p><strong>Search for tracks</strong> : <code>track search QUERY</code><br>
+eg. <code>track search Fav</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-01 16:21:35 UTC</div></div></div></body></html>
