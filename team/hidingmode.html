@@ -1,0 +1,571 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>David Choo - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">JxMusic</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S1-T13-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>David Choo - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-jxmusic"><a class="link" href="#project-jxmusic">PROJECT: JxMusic</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JxMusic is a desktop music player application developed as a school project for the learning of Software
+Engineering principles. The project is built upon <a href="https://se-edu.github.io/addressbook-level4/">AddressBook(Level 4)</a>.
+The user interacts with it using a CLI, and it has a GUI created with JavaFX.
+It is written in Java, and has about 10 kLoC.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&amp;search=hidingmode"><strong>Code contributed</strong></a></p>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: Implemented Player component</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Handles all audio related functionalities by interfacing with JavaFX Media.</p>
+</li>
+<li>
+<p>Justification: This is the core feature of JxMusic as it handles audio related interactions in a music player application.</p>
+</li>
+<li>
+<p>Highlights: This enhancement supports new media control commands. Existing mp3 player libraries for Java were briefly evaluated. Before settling on JavaFX Media, I created a <a href="https://gist.github.com/hidingmode/7b138634854569400fed9fbd6ec4e0b0">prototype player</a> to experiment on its API. However, the implementation of Player experienced some setbacks due to unforeseen issues with JavaFX Media.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Discovery of <a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8210828">confirmed JavaFX Media bug</a></p>
+</li>
+<li>
+<p>Resolution of <a href="https://github.com/CS2103-AY1819S1-T13-3/main/issues/35">another suspected JavaFX Media bug</a></p>
+</li>
+<li>
+<p>Incompatibility of <a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/101/commits/a4c5170c53c234f023e48b3e0ade3654457fd225#diff-197aef6c54da4c4e85898e9156e245b4R37">JavaFX Media and JUnit, and by extension, Travis and AppVeyor</a>.</p>
+</li>
+<li>
+<p>Asynchronous nature of JavaFX Media</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: Coordinated refactoring process of entire code base</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Transforms most of the original address book 4 codes to fit as a music player.</p>
+</li>
+<li>
+<p>Justification: As the original code base was an address book application, a major overhaul was made to transform it into a music player application.</p>
+</li>
+<li>
+<p>Highlights: Written elaborative and detailed issues and PRs.
+<a href="https://github.com/CS2103-AY1819S1-T13-3/main/issues/34">Guiding principle</a> was to transform <code>AddressBook</code> to <code>Library</code>, <code>Person</code> to <code>Playlist</code>, <code>Tag</code> to <code>Track</code>. <a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/42">Source refactored</a> in 2 days and <a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/49">tests refactored</a> in 3 days.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: Implemented <code>play</code>, <code>playlist new</code>, <code>duration</code> commands.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/63"><code>play</code></a>: Plays a playlist/track or resume from a pause</p>
+</li>
+<li>
+<p><a href="https://github.com/CS2103-AY1819S1-T13-3/main/commit/ff264c5af1fe731f7bc4c9b641bcd650db6be9fa#diff-23a2194e30915cb772a3d1546d69fc5d"><code>playlist new</code></a>: Creates a new playlist</p>
+</li>
+<li>
+<p><a href="https://github.com/CS2103-AY1819S1-T13-3/main/commit/bd0e7ebed3283be366708556debad5b3bd9a5708#diff-76e971f55875fb7bcd7f30543550f829"><code>duration</code></a>: Shows the duration of a playing track</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Justification: These are just some of the many commands the team worked on as a whole.</p>
+</li>
+<li>
+<p>Highlights:
+<code>play</code> command caters for 5 modes of usage - <code>play p/</code>, <code>play p/&lt;playlist&gt;</code>, <code>play t/</code>, <code>play t/&lt;track&gt;</code>, and <code>play</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Minor enhancement</strong>: <a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/49/commits/3ab8ec79d21476eac49d5e91aed4c668c6120ff0#diff-d6dedaa869e5f06f11b19f555ba08a07R33">Modified the parser regex</a> to cater for command phrases instead of just single command word.</p>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>: Implemented simple <a href="https://github.com/CS2103-AY1819S1-T13-3/main/commit/17453bd6a806696c3101d55663ac7395bae31db9#diff-d7278ba9866fb6c2c946f04fee81fbd7">validation checks for tracks using mp3 file header bytes</a>.</p>
+</li>
+<li>
+<p>Test: Written <a href="https://github.com/CS2103-AY1819S1-T13-3/main/commit/82c1cdab0b7cad0f62474f3da3f811df83c35f20#diff-197aef6c54da4c4e85898e9156e245b4">test for <code>play</code></a> command</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Project management:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set up <a href="https://travis-ci.org/CS2103-AY1819S1-T13-3/main/">Travis</a> and <a href="https://ci.appveyor.com/project/docsautopublisher/main">AppVeyor</a></p>
+</li>
+<li>
+<p>Managed <a href="https://github.com/CS2103-AY1819S1-T13-3/main/releases">releases</a> <code>v1.1</code> - <code>v1.4</code> (4 releases) on GitHub</p>
+</li>
+<li>
+<p>Used issue tracker as backlog by <a href="https://github.com/CS2103-AY1819S1-T13-3/main/issues?utf8=%E2%9C%93&amp;q=is%3Aissue+author%3Ahidingmode">listing user stories</a></p>
+</li>
+<li>
+<p>Coordinated release branching strategy <a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/52">v1.2</a>, <a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/62">v1.3</a>, <a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/104">v1.4</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Evidence of technical leadership:</strong> Occasional participation on the module forum</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/40#issuecomment-424299702">feedback to AB4</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/15">module website</a></p>
+</li>
+<li>
+<p><a href="https://github.com/TEAMMATES/teammates/issues/9115">TEAMMATES website</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/119#issuecomment-432974823">reply to a similar issue I encountered</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/17">sharing of an issue I thought others might face</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="playing-a-track-code-play-t-code"><a class="link" href="#playing-a-track-code-play-t-code">Playing a track : <code>play t/</code></a></h3>
+<div class="paragraph">
+<p>Plays a track. If there is a playlist or track playing, it will be stopped and the track will be played.<br>
+Format: <code>play t/[TRACK]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>TRACK</code> is an optional parameter, referring to the name of an existing track in the library folder.</p>
+</li>
+<li>
+<p>If <code>TRACK</code> is not specified, the first track in the library folder sorted by file name will be played.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play t/</code><br>
+Plays the first track in the library folder sorted by file name if there is any.</p>
+</li>
+<li>
+<p><code>play t/Some Song</code><br>
+Plays the track named "Some Song" if it exists in the library folder.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="playing-a-playlist-code-play-p-code"><a class="link" href="#playing-a-playlist-code-play-p-code">Playing a playlist : <code>play p/</code></a></h3>
+<div class="paragraph">
+<p>Plays a playlist. Similarly to playing a track, if there is a playlist or track playing, it will be stopped and the playlist will be played.<br>
+Format: <code>play p/[PLAYLIST]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>PLAYLIST</code> is an optional parameter, referring to the name of an existing playlist in the library folder.</p>
+</li>
+<li>
+<p>If <code>PLAYLIST</code> is not specified, the first playlist in the library sorted by name will be played.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play p/</code><br>
+Plays the first playlist in the library folder if there is any.</p>
+</li>
+<li>
+<p><code>play p/Favourites</code><br>
+Plays the playlist named "Favourites" if it exists in the library folder.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="continuing-a-paused-track-code-play-code"><a class="link" href="#continuing-a-paused-track-code-play-code">Continuing a paused track : <code>play</code></a></h3>
+<div class="paragraph">
+<p>Continues a paused track.<br>
+Format: <code>play</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play t/Some Song</code><br>
+<code>pause</code><br>
+<code>play</code><br>
+"Some Song" will continue playing from where it is paused.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="creating-a-playlist-code-playlist-new-code"><a class="link" href="#creating-a-playlist-code-playlist-new-code">Creating a playlist : <code>playlist new</code></a></h3>
+<div class="paragraph">
+<p>Creates a new playlist with specific tracks and saves it into the library.<br>
+Format: <code>playlist new p/PLAYLIST [t/TRACK]&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>PLAYLIST</code> refers to the playlist’s name.</p>
+</li>
+<li>
+<p><code>TRACK</code> refers to the track’s name.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>playlist new p/Favourites t/Some Song t/Some Song 2</code><br>
+Creates a new playlist with the name Favourites and adds the tracks named Some Song and Some Song 2.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Architecture.png" alt="Architecture" width="600">
+</div>
+<div class="title">Figure 1. Architecture Diagram</div>
+</div>
+<div class="sect2">
+<h3 id="Design-Player"><a class="link" href="#Design-Player">Player component</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/PlayerClassDiagram.png" alt="PlayerClassDiagram" width="400">
+</div>
+<div class="title">Figure 2. Structure of the Player Component</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/jxmusic/player/Player.java"><code>Player.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Player</code> component,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>interfaces with JavaFX Media to play sounds</p>
+</li>
+<li>
+<p>handles media control with mp3 files</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="player-component"><a class="link" href="#player-component">Player Component</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<div class="paragraph">
+<p>The Player component is a new component in addition to the existing 4 other components of AddressBook. It handles all audio related functionalities for some of the Command classes to use. Player mainly interacts with the JavaFX media library that is included in Java, so no third party library is involved.</p>
+</div>
+<div class="paragraph">
+<p>The job of the Player is basically forwarding requests of media playback controls to the Playable object.</p>
+</div>
+<div class="sect4">
+<h5 id="singleton-player"><a class="link" href="#singleton-player">Singleton Player</a></h5>
+<div class="paragraph">
+<p>Player is implemented as a singleton as only one instance of it is required at any time. While singleton brings about undesired implications such as tighter coupling and lower testability, we ensured that Player is only used by the Command classes and no other parts of the code touches Player. As for testability, we discover that JUnit is not compatible for JavaFX media (details in <a href="#Notable-Issues-JavaFXMedia">Notable Issues with JavaFX Media</a>). On the plus side, singleton pattern makes adding dependency very easy which is very helpful as adding dependency into the Logic component of Address Book was tedious.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/PlayerCompleteClassDiagram.png" alt="PlayerCompleteClassDiagram" width="600">
+</div>
+<div class="title">Figure 3. Player component complete class diagram</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="PlayableStatus"><a class="link" href="#PlayableStatus">PlayableStatus</a></h5>
+<div class="paragraph">
+<p><code>PlayableStatus</code> to represents the state of the player, effectively acts as a layer on top of JavaFX’s <code>MediaPlayer.Status</code>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>UNINITIALIZED</code> - The initial state when no track or playlist has been played</p>
+</li>
+<li>
+<p><code>PLAYING</code> - User enters either the <code>play p/</code> or <code>play t/</code> command</p>
+</li>
+<li>
+<p><code>PAUSED</code> - User enters the <code>pause</code> command</p>
+</li>
+<li>
+<p><code>STOPPED</code> - User enters the <code>stop</code> command</p>
+</li>
+<li>
+<p><code>ERROR</code> - Any other states of the <code>MediaPlayer.Status</code> which JxMusic is not concerned with</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/PlayableStatusStateChartDiagram.png" alt="PlayableStatusStateChartDiagram" width="300">
+</div>
+<div class="title">Figure 4. <code>PlayableStatus</code> state chart diagram</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="Skipped-Tests"><a class="link" href="#Skipped-Tests">Skipped Tests</a></h5>
+<div class="paragraph">
+<p>JUnit and JavaFX MediaPlayer does not work well together. Running any test that constructs a MediaPlayer object (ie <code>new MediaPlayer</code>) will throw <code>IllegalStateException: Toolkit not initialized</code>. In order to resolve the exception, it requires calling <code>Platform.startup()</code> before <code>new MediaPlayer</code> is called. Even so, the tests will not work on Travis nor Appveyor, throwing <code>MediaException: Cannot create player!</code> thus failing the builds. It is suspected to be due to incompatibility or lack of support for JavaFX Media on their test servers since JavaFX Media has its own <a href="https://www.oracle.com/technetwork/java/javafx/downloads/supportedconfigurations-1506746.html">dependencies (at the bottom of link)</a>.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, any test that depends on MediaPlayer are skipped by using <code>Assume.assumeNoException(mediaException)</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="Notable-Issues-JavaFXMedia"><a class="link" href="#Notable-Issues-JavaFXMedia">Notable Issues with JavaFX Media</a></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>JavaFX Media does not work for mp3 files that has photoshopped album art.<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>This issue has been reported as a <a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8210828">confirmed Java bug</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Playing a track on MacOS requires setting the MediaPlayer current time to 0 before calling <code>play()</code> as it jumps to the end of media for no reason. Whereas on Windows, calling <code>MediaPlayer.play</code> works.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This issue is addressed at <a href="{repoUrl}/issues/35">#35</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-choice-of-media-player-library"><a class="link" href="#aspect-choice-of-media-player-library">Aspect: Choice of media player library</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Use JavaFX Media API</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>No additional dependency (<a href="https://www.oracle.com/technetwork/java/javafx/downloads/supportedconfigurations-1506746.html">at least on common operating systems</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Cons:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>See <a href="#Skipped-Tests">Skipped Tests</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Use 3rd party mp3 player library such as JLayer</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Possibly less issues than JavaFX Media.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Cons:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Additional dependency</p>
+</li>
+<li>
+<p>Existing mp3 libraries for java are old and badly documented.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="play"><a class="link" href="#play">Play</a></h4>
+<div class="paragraph">
+<p>PlayCommand caters for commands having the word <code>play</code> in it, in particular, <code>play</code>, <code>play p/</code> and <code>play t/</code> commands. It consists of 5 modes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Continue from pause - <code>play</code></p>
+</li>
+<li>
+<p>Default playlist - <code>play p/</code></p>
+</li>
+<li>
+<p>Specific playlist - <code>play p/&lt;playlist name&gt;</code></p>
+</li>
+<li>
+<p>Default track - <code>play t/</code></p>
+</li>
+<li>
+<p>Specific track - <code>play t/&lt;track name&gt;</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>These modes are determined by the different PlayCommand constructors called by the PlayCommandParser after it parses the user input, as shown in the activity diagram below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/PlayCommandActivityDiagram.png" alt="PlayCommandActivityDiagram" width="600">
+</div>
+<div class="title">Figure 5. Play command activity diagram</div>
+</div>
+<div class="paragraph">
+<p>Playing a playlist constructs a PlayablePlaylist which is essentially playing a list of PlayableTrack. The currently playing track is pointed by the <code>currentIndex</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/PlayablePlaylistObjectDiagram1.png" alt="PlayablePlaylistObjectDiagram1" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>When a track finishes playing, the next track is played.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/PlayablePlaylistObjectDiagram2.png" alt="PlayablePlaylistObjectDiagram2" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Future enhancement: implement <code>prev()</code> for playing the previous track.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/PlayablePlaylistObjectDiagram3.png" alt="PlayablePlaylistObjectDiagram3" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>I also wrote the entire "Instructions for manual testing" section in developer guide which is too long to be included here.</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:46:41 UTC</div></div></div></body></html>

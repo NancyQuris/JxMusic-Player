@@ -1,0 +1,394 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Hansel Chia - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">JxMusic</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S1-T13-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Hansel Chia - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-jxmusic"><a class="link" href="#project-jxmusic">PROJECT: JxMusic</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JxMusic is a desktop music player application developed as a school project for the learning of Software
+Engineering principles. The project is built upon <a href="https://se-edu.github.io/addressbook-level4/">AddressBook(Level 4)</a>.
+The user interacts with it using a CLI, and it has a GUI created with JavaFX.
+It is written in Java, and has about 10 kLoC.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&amp;search=handshou"><strong>Code contributed</strong></a></p>
+</li>
+<li>
+<p><a href="https://github.com/CS2103-AY1819S1-T13-3/main/commits?author=handshou"><strong>Commits contributed</strong></a></p>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to manage playlist by adding and deleting tracks</strong>, including writing tests</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to add or remove tracks. Adding tracks is done in two ways. Firstly, by using index of the track in the panel. Otherwise, by using the track&#8217;s name. Multiple tracks can be added in one line of command, by track index or track name. Deleting tracks are done by referencing tracks in the playlist card.</p>
+</li>
+<li>
+<p>Justification: This feature improves the usability of playlists because a user can initiate multiple tracks into a playlist with one line of command. Tracks can be be deleted too.</p>
+</li>
+<li>
+<p>Highlights: The implementation of adding and deleting tracks extend beyond commands, into model, playlist and track. To reduce coupling, implemented methods in Playlist and ModelHelper.</p>
+</li>
+<li>
+<p>Credits: <em>AddressBook&#8217;s</em> implementation of <strong>rest operator</strong> in <a href="https://github.com/se-edu/addressbook-level4/blob/dbb73f0157f52c79d474d6df643e58703b8dcc62/src/main/java/seedu/address/logic/parser/AddCommandParser.java#L56">arePrefixesPresent()</a>. Applied the idea for multiple parameters to overloading TrackAddCommand() constructor to accept multiple Tracks.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>: added <strong>playlist</strong> methods, enhanced <strong>track</strong> and <strong>model</strong> methods to support major enhancements. Small changes with helper methods in <strong>CommandTestUtil</strong>, <strong>ParserUtil</strong> and <strong>ModelHelper</strong>. Notable mention:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>[<a href="https://github.com/CS2103-AY1819S1-T13-3/main/blame/master/src/main/java/seedu/jxmusic/model/Playlist.java">Playlist</a>]</strong> boolean:isEmpty, Playlist:copy, boolean:deleteTrack, boolean:hasTrack, Index:getTrackIndex</p>
+</li>
+<li>
+<p><strong>[<a href="https://github.com/CS2103-AY1819S1-T13-3/main/blame/master/src/main/java/seedu/jxmusic/model/Track.java">Track</a>]</strong> boolean:equals (critical for TrackAdd and TrackDel), int:hashCode</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Managed some issues: <a href="https://github.com/CS2103-AY1819S1-T13-3/main/issues/69">#69</a>,
+<a href="https://github.com/CS2103-AY1819S1-T13-3/main/issues/71">#71</a></p>
+</li>
+<li>
+<p>Managed some pull requests:
+<a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/60">#60</a>,
+<a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/70">#70</a>,
+<a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/104">#104</a>,
+<a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/107">#107</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PRs reviewed:
+<a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/61">#61</a>,
+<a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/55">#55</a>,
+<a href="https://github.com/CS2103-AY1819S1-T13-3/main/pull/100">#100</a></p>
+</li>
+<li>
+<p>Reported bugs for other teams in the class:  <a href="https://github.com/CS2103-AY1819S1-W12-4/main/issues/129">1</a>, <a href="https://github.com/CS2103-AY1819S1-W12-4/main/issues/120">2</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Tools:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Integrated a new Github plugin (CircleCI) to the team repo</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="adding-a-track-into-a-playlist-code-track-add-code"><a class="link" href="#adding-a-track-into-a-playlist-code-track-add-code">Adding a track into a playlist : <code>track add</code></a></h3>
+<div class="paragraph">
+<p>Adds a track into a playlist. Track can be chosen by using its name or its index in the track list panel.<br>
+Format: <code>track add p/PLAYLIST [t/TRACK]&#8230;&#8203;</code>
+Format: <code>track add p/PLAYLIST [i/INDEX]&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>PLAYLIST</code> refers to an existing playlist’s name.</p>
+</li>
+<li>
+<p><code>TRACK</code> refers to the name of an existing track in the library folder.</p>
+</li>
+<li>
+<p><code>INDEX</code> refers to the index of a track in the track list panel.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>track add p/Favourites t/Some Song t/Some Song2</code><br>
+Adds the track named "Some Song" and "Some Song2" to the "Favourites" playlist.</p>
+</li>
+<li>
+<p><code>track add p/Favourites i/1 2</code><br>
+Adds the first and second track in the track list panel to the "Favourites" playlist.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-track-from-a-playlist-code-track-del-code"><a class="link" href="#deleting-a-track-from-a-playlist-code-track-del-code">Deleting a track from a playlist : <code>track del</code></a></h3>
+<div class="paragraph">
+<p>Removes a track from a playlist. Track can is chosen by using its appeared sequence in playlist card.<br>
+Format: <code>track del p/PLAYLIST INDEX</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Track is selected by its index <strong>not</strong> its name.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>PLAYLIST</code> refers to an existing playlist’s name.</p>
+</li>
+<li>
+<p><code>INDEX</code> refers to the index of the track in the <code>PLAYLIST</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>track del p/Favourites i/3</code><br>
+Deletes the 3rd track in "Favourites" playlist.
+== Command Summary</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="commands-for-controlling-playback"><a class="link" href="#commands-for-controlling-playback">Commands for controlling playback</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Play track</strong> : <code>play t/[TRACK]</code></p>
+</li>
+<li>
+<p><strong>Play playlist</strong> : <code>play p/[PLAYLIST]</code></p>
+</li>
+<li>
+<p><strong>Pause track</strong> : <code>pause</code></p>
+</li>
+<li>
+<p><strong>Continue track</strong> : <code>play</code></p>
+</li>
+<li>
+<p><strong>Stop playing</strong> : <code>stop</code></p>
+</li>
+<li>
+<p><strong>Seek time point</strong> : <code>seek d/TIME</code><br>
+eg. <code>seek d/1 10</code></p>
+</li>
+<li>
+<p><strong>Step</strong> : <code>step [s/SECONDS]</code><br>
+eg. <code>step s/100</code></p>
+</li>
+<li>
+<p><strong>Stepback</strong> : <code>stepback [s/SECONDS]</code><br>
+eg. <code>stepback s/100</code></p>
+</li>
+<li>
+<p><strong>Replay</strong> : <code>replay</code>
+=== Commands for controlling sequence of playback</p>
+</li>
+<li>
+<p><strong>Skip to next track</strong> : <code>next</code></p>
+</li>
+<li>
+<p><strong>Skip to previous track</strong> : <code>prev</code></p>
+</li>
+<li>
+<p><strong>Repeat track</strong> : <code>repeat track</code></p>
+</li>
+<li>
+<p><strong>Repeat playlist</strong> : <code>repeat playlist</code></p>
+</li>
+<li>
+<p><strong>Turn off repeat mode</strong> : <code>repeat off</code></p>
+</li>
+<li>
+<p><strong>Shuffle playlist</strong> : <code>shuffle</code></p>
+</li>
+<li>
+<p><strong>Turn off shuffle mode</strong> : <code>shuffle off</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="commands-for-managing-playlists-in-library"><a class="link" href="#commands-for-managing-playlists-in-library">Commands for managing playlists in library</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>List all playlists</strong> : <code>playlist list</code></p>
+</li>
+<li>
+<p><strong>Search for playlist</strong> : <code>playlist search QUERY</code><br>
+eg. <code>playlist search Fav</code></p>
+</li>
+<li>
+<p><strong>Create playlist</strong> : <code>playlist new p/PLAYLIST [t/TRACK]&#8230;&#8203;</code><br>
+eg. <code>playlist new p/Favourites t/Some Song t/Some Song 2</code></p>
+</li>
+<li>
+<p><strong>Delete playlist</strong> : <code>playlist del INDEX</code><br>
+eg. <code>playlist del INDEX</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="commands-for-managing-tracks-in-playlist"><a class="link" href="#commands-for-managing-tracks-in-playlist">Commands for managing tracks in playlist</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Add track to playlist</strong> : <code>track add p/PLAYLIST t/TRACK</code><br>
+eg. <code>track add p/Favourites t/Some Song</code></p>
+</li>
+<li>
+<p><strong>Delete track from playlist</strong> : <code>track del p/PLAYLIST i/INDEX</code><br>
+eg. <code>track del p/PLAYLIST i/1</code></p>
+</li>
+<li>
+<p><strong>List all tracks</strong> : <code>track list</code></p>
+</li>
+<li>
+<p><strong>Search for tracks</strong> : <code>track search QUERY</code><br>
+eg. <code>track search Fav</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="track-adding-and-removing-feature"><a class="link" href="#track-adding-and-removing-feature">Track Adding and Removing Feature</a></h3>
+<div class="paragraph">
+<p>Simple-to-use track management commands that add tracks to a specified playlist.</p>
+</div>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<div class="paragraph">
+<p>When managing a playlist, you can customise it by adding and removing tracks from it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/TrackAddCommandSequenceDiagram.png" alt="TrackAddCommandSequenceDiagram" width="720">
+</div>
+<div class="title">Figure 1. Sequence diagram: track add command</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/TrackAddCommandActivityDiagram.png" alt="TrackAddCommandActivityDiagram" width="720">
+</div>
+<div class="title">Figure 2. Activity diagram: track add command</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/TrackDeleteCommandSequenceDiagram.png" alt="TrackDeleteCommandSequenceDiagram" width="720">
+</div>
+<div class="title">Figure 3. Sequence diagram: track delete command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="paragraph">
+<p>To add new tracks to a playlist can be a very mechanical task, hence the ease of allowing for adding multiple entries helps to ease the need for repetition. It also makes sense for the inclusion of adding tracks by referring to its index on the panel.</p>
+</div>
+<div class="paragraph">
+<p>Hence, there are two ways that tracks can be added.
+Firstly, with track name.
+Secondly, with its index from filteredTrackList panel.</p>
+</div>
+<div class="paragraph">
+<p>The omission of repeating the index prefix is also added to reduce typing required to perform deletion. Having to type the prefix with every index means including up to 200% more typing per index to add.</p>
+</div>
+<div class="paragraph">
+<p>Deleting tracks does not support deletion in multiples, and it omits the need for index prefix.</p>
+</div>
+<div class="paragraph">
+<p>While tracks can be added by name, it makes sense to allow the user to make case-insensitive references to tracks. This helps to reduce the need to follow case convention for track names.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="future-enhancements"><a class="link" href="#future-enhancements">Future Enhancements</a></h4>
+<div class="paragraph">
+<p>Deleting multiple tracks could be implemented as more advanced features are added.</p>
+</div>
+<div class="paragraph">
+<p>Adding multiple tracks by substrings can be implemented to facilitate quick modification of playlists.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:46:41 UTC</div></div></div></body></html>

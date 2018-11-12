@@ -1,0 +1,688 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>gongjie663746 - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">JxMusic</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S1-T13-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>gongjie663746 - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-jxmusic"><a class="link" href="#project-jxmusic">PROJECT: JxMusic</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JxMusic is for those who prefer to use a desktop app for listening to music. More importantly, JxMusic is optimized for those who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&amp;search=gongjie663746"><strong>Code contributed</strong></a></p>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: <strong>Storage</strong> component of Jxmusic</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Enable the app to save the Library’s Playlist information into JSON file, read from library to initialize library class, and scan all valid mp3 files in the /library folder.</p>
+</li>
+<li>
+<p>Justification: It is important in this application because it allows the user to have their playlists information stored. Furthermore, it loads the library folder’s mp3 files and display them on the track panel.</p>
+</li>
+<li>
+<p>Highlights: This enhancement takes the edge cases into considerations when the library folder is empty or does not exist, it can extract a default library from resource folder of the application.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Other Contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Minor enhancements: Added Track List Command and Track Search Command, which allow users to navigate the all the tracks available in the library folder, and search tracks using keywords.</p>
+</li>
+<li>
+<p>Contributions to project management：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>self-assigning issues. <a href="https://github.com/CS2103-AY1819S1-T13-3/main/issues/40">#40</a>, <a href="https://github.com/CS2103-AY1819S1-T13-3/main/issues/37">#37</a></p>
+</li>
+<li>
+<p>Contribute to the brainstorming. <a href="https://github.com/CS2103-AY1819S1-T13-3/main/issues/24">#24</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Evidence of helping others:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Spotted bugs and edge cases on the track and playlist search command.</p>
+</li>
+<li>
+<p>Found bugs on the Group T12-4&#8217;s software. <a href="https://github.com/CS2103-AY1819S1-T12-4/main/issues/153">#153</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="listing-all-tracks-code-track-list-code"><a class="link" href="#listing-all-tracks-code-track-list-code">Listing all tracks : <code>track list</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all tracks in the library.<br>
+Format: <code>track list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="stepping-a-track-code-step-code-coming-in-v2-0"><a class="link" href="#stepping-a-track-code-step-code-coming-in-v2-0">Stepping a track : <code>step</code> [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Steps forward by default 10 seconds or specified time in seconds.<br>
+Format: <code>step [s/SECONDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>SECONDS</code> is the number of seconds to step forward.</p>
+</li>
+<li>
+<p>If <code>SECONDS</code> is negative, the command behaves similar to <code>stepback</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play t/Some Song</code><br>
+<code>step</code><br>
+The track moves forward to 10 seconds later of the track and keeps playing.</p>
+</li>
+<li>
+<p><code>play t/Some Song</code><br>
+<code>step s/100</code><br>
+Stepping forward 100 seconds.</p>
+</li>
+<li>
+<p><code>play t/Some Song</code><br>
+<code>stop s/-100</code><br>
+Using negative value for <code>SECONDS</code> will apply the same behaviour as <code>stepback</code>. The track steps backward 100 seconds.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="stepping-back-code-stepback-code-coming-in-v2-0"><a class="link" href="#stepping-back-code-stepback-code-coming-in-v2-0">Stepping back : <code>stepback</code> [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Steps back by default 10 seconds or specified time in seconds.<br>
+Format: <code>stepback [s/SECONDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>SECONDS</code> is the number of seconds to step backward.</p>
+</li>
+<li>
+<p>If <code>SECONDS</code> is negative, the command behaves similar to <code>step</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play t/Some Song</code><br>
+<code>stepback</code><br>
+The track moves backward 10 seconds earlier of the track and keeps playing. If the track has just played for less than 10 seconds, the track replays.</p>
+</li>
+<li>
+<p><code>play t/Some Song</code><br>
+<code>stepback s/100</code><br>
+Stepping back 100 seconds.</p>
+</li>
+<li>
+<p><code>play t/Some Song</code><br>
+<code>stepback s/-100</code><br>
+Using negative value for <code>SECONDS</code> will apply the same behaviour as <code>step</code>. The track steps forward 100 seconds.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="replay-a-track-code-replay-code-coming-in-v2-0"><a class="link" href="#replay-a-track-code-replay-code-coming-in-v2-0">Replay a track : <code>replay</code> [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Replays a track before the track ends to start from the beginning.<br>
+Format: <code>replay</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play t/Some Song</code><br>
+<code>seek t/100</code><br>
+<code>replay</code><br>
+The track plays from the beginning.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="skipping-to-the-next-track-code-next-code-coming-in-v2-0"><a class="link" href="#skipping-to-the-next-track-code-next-code-coming-in-v2-0">Skipping to the next track : <code>next</code> [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Plays the next track.<br>
+Format: <code>next</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>next</code><br>
+If the last track is being played, the playlist ends and stops.</p>
+</li>
+<li>
+<p><code>play t/Some Song</code><br>
+<code>repeat track</code><br>
+<code>next</code><br>
+“Some Song” will replay.</p>
+</li>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>repeat playlist</code><br>
+<code>next</code><br>
+Go to the next track. Since <code>repeat playlist</code> is on, if it is the last track of the playlist playing, the first track of the playlist will play.</p>
+</li>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>shuffle</code><br>
+<code>repeat playlist</code><br>
+<code>next</code><br>
+Go to the next track. Since <code>shuffle</code> and <code>repeat playlist</code> are on, if it is the last track playing, the next shuffled repeat will play.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="skipping-to-the-previous-track-code-prev-code-coming-in-v2-0"><a class="link" href="#skipping-to-the-previous-track-code-prev-code-coming-in-v2-0">Skipping to the previous track : <code>prev</code> [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Plays the previous track.<br>
+Format: <code>prev</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>prev</code><br>
+Plays the previous track. If the current track is first track in playlist, replays the same track since there is no previous track.</p>
+</li>
+<li>
+<p><code>play t/Some Song</code><br>
+<code>repeat track</code><br>
+<code>prev</code><br>
+“Some Song” will replay.</p>
+</li>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>repeat playlist</code><br>
+<code>prev</code><br>
+Go to the previous track. Since <code>repeat playlist</code> is on, if it is the first track of the playlist playing, the last track of the playlist will play.</p>
+</li>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>shuffle</code><br>
+<code>repeat playlist</code><br>
+<code>prev</code><br>
+Go to the previous track. Since <code>shuffle</code> and <code>repeat playlist</code> are on, if it is the first track playing and there was no previous track, the same track repeats.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="repeatedly-playing-a-track-code-repeat-track-code-coming-in-v2-0"><a class="link" href="#repeatedly-playing-a-track-code-repeat-track-code-coming-in-v2-0">Repeatedly playing a track : <code>repeat track</code> [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Switches the repeat mode to repeatedly play a single track. The command works even without any track playing. Upon running this command, any subsequent track will be played on repeat.<br>
+Format: <code>repeat track</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>repeat playlist</code><br>
+<code>repeat track</code><br>
+Switches to repeat track mode. The currently playing track will be on repeat.</p>
+</li>
+<li>
+<p><code>repeat track</code><br>
+<code>play t/Some Song</code><br>
+“Some Song” will play on repeat.</p>
+</li>
+<li>
+<p><code>repeat track</code><br>
+<code>play p/Favourites</code><br>
+The first track of the “Favourites” playlist will play on repeat.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="repeatedly-playing-a-playlist-code-repeat-playlist-code-coming-in-v2-0"><a class="link" href="#repeatedly-playing-a-playlist-code-repeat-playlist-code-coming-in-v2-0">Repeatedly playing a playlist : <code>repeat playlist</code> [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Switches the repeat mode to repeatedly play a single playlist. The command works even without any playlist playing. Upon running this command, any subsequent playlist will be played on repeat.<br>
+Format: <code>repeat playlist</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>repeat track</code><br>
+<code>repeat playlist</code><br>
+Switches to repeat playlist mode. “Favourites” will play on repeat.</p>
+</li>
+<li>
+<p><code>repeat playlist</code><br>
+<code>play p/Favourites</code><br>
+“Favourites” will play on repeat.</p>
+</li>
+<li>
+<p><code>repeat playlist</code><br>
+<code>play t/Some Song</code><br>
+“Some Song” will play on repeat.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="turning-off-repeat-mode-code-repeat-off-code-coming-in-v2-0"><a class="link" href="#turning-off-repeat-mode-code-repeat-off-code-coming-in-v2-0">Turning off repeat mode : <code>repeat off</code> [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Turns off the repeat mode<br>
+Format: <code>repeat off</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>repeat playlist</code><br>
+<code>repeat off</code><br>
+Switches off repeating mode.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="shuffling-a-playlist-code-shuffle-code-coming-in-v2-0"><a class="link" href="#shuffling-a-playlist-code-shuffle-code-coming-in-v2-0">Shuffling a playlist : <code>shuffle</code> [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Switches on shuffle mode to play tracks in random order.<br>
+Format: <code>shuffle</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>When a playlist is in playback (either playing or paused), <code>shuffle</code> will put the rest of the playlist into random order.</p>
+</li>
+<li>
+<p><code>shuffle</code> will have no effect when track repeating mode is on.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>shuffle</code><br>
+<code>play p/Favourites</code><br>
+“Favourites” will play in random order.</p>
+</li>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>repeat playlist</code><br>
+<code>shuffle</code><br>
+Subsequent tracks will be played in random order. When all the tracks in the playlist has been played, the next repeat will be shuffled.</p>
+</li>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>repeat track</code><br>
+<code>shuffle</code><br>
+The track being repeated will continue to play until <code>repeat off</code> only then subsequent tracks will play in random order from the remaining unplayed tracks in the playlist.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="turning-off-shuffle-mode-code-shuffle-off-code-coming-in-v2-0"><a class="link" href="#turning-off-shuffle-mode-code-shuffle-off-code-coming-in-v2-0">Turning off shuffle mode : <code>shuffle off</code> [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Turns off the shuffle mode<br>
+Format: <code>shuffle off</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>play p/Favourites</code><br>
+<code>shuffle</code><br>
+<code>shuffle off</code><br>
+Switches off shuffling mode.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="readlibrary"><a class="link" href="#readlibrary">ReadLibrary</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<div class="paragraph">
+<p>The <code>readLibrary</code> is a part of <code>JsonLibraryStorage</code>. It reads the Json file as well as the library folder when initialising the <code>library</code> class. It calls the following operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>JsonFileStorage.loadDataFromFile(filepath)</code> - deserialize the Json file and create <code>library</code> class.</p>
+</li>
+<li>
+<p><code>Trackscanner.scan(libraryDir)</code> - scan through the library folder and fill all the valid mp3 files into a set of tracks.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>No matter whether the Json file exists, <code>trackscanner</code> will run first to make sure the <code>library</code> class contains the tracks set. Then if the file path exists, it will deserialize the json file to initialize library’s playlist information. The deserializer and serializer are programmed with <code>Gson</code> library.<br></p>
+</div>
+<div class="paragraph">
+<p>The <code>trackscanner</code> navigates to the library folder and extracts the mp3 files and add them to the set of tracks. However there are cases that the user does not have a library folder in the same directory as the app. To ensure the tracks contained inside the playlist to be valid and navigable, we put a library folder containing default tracks inside the resources folder.
+Hence, the program first extracts the library folder from the jar file and copy it to the directory. There are two methods that the app copies library to the directory:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Case 1: If the MainApp is run using jar file, <code>trackscanner</code> will internally run the unzip command to unzip the jar file. (Warning: This only works if the jar file is opened using Terminal);</p>
+</li>
+<li>
+<p>Case 2: If the MainApp is run using IDE, <code>trackscanner</code> will copy the library folder from resources to the directory;</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/TrackScannerActivityDiagram.png" alt="TrackScannerActivityDiagram" width="800">
+</div>
+<div class="title">Figure 1. Activity of trackscanner</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-choice-of-media-player-library"><a class="link" href="#aspect-choice-of-media-player-library">Aspect: Choice of media player library</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Read the Json file from data folder and scan the tracks from library folder at the same time.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enables the library to initialise with all the available tracks in library folder</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Cons:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The track treeset in the library class will not update again after initialisation.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Do not scan the tracks in <code>readLibrary</code>, scan the library each time the user search for tracks in the library folder.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Lead to the files’ latest status inside the library folder</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="future-enhancements"><a class="link" href="#future-enhancements">Future Enhancements</a></h4>
+<div class="paragraph">
+<p>When the user double clicks the jar file it cannot run because the unzipping of jar file is done using <code>process.exec</code>, which requires the user to run the jar file using terminal. This needs to be addressed in future development.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="track-search-and-track-list"><a class="link" href="#track-search-and-track-list">Track search and Track list</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">Current Implementation</a></h4>
+<div class="paragraph">
+<p>The <code>tracklist</code> and <code>tracksearch</code> commands are implemented to view and filter tracks in the library.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Command.TrackListCommand</code> - list all the tracks inside the library</p>
+</li>
+<li>
+<p><code>Command.TrackSearchCommand</code> - search the desired tracks from library whose name contains any of the argument keywords.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/TrackListCommandSequenceDiagram.png" alt="TrackListCommandSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 2. Sequence of track list command</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/TrackSearchCommandSequenceDiagram.png" alt="TrackSearchCommandSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 3. Activity of track search command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-searching-multiple-keywords"><a class="link" href="#aspect-searching-multiple-keywords">Aspect: Searching multiple keywords.</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Combines each search results by each keywords separated by space.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Find tracks that match with any of the keywords</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Cons:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Spaces are not included in the keywords.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> consider words as one part of the desired track and show results of the search.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Show more precise results</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-tracks-listed-display"><a class="link" href="#aspect-tracks-listed-display">Aspect: Tracks listed display</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> List the tracks in a new panel separate from playlist panel.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Tracks are more clearly shown.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Show the tracks in the message box</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Easier to implement.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Cons:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Takes up the message box and hence the success message or failing message cannot be seen.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="future-enhancements-2"><a class="link" href="#future-enhancements-2">Future Enhancements</a></h4>
+<div class="paragraph">
+<p>Future development can combine the two alternatives so that the user can search with keywords including spaces when they intend to.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:46:41 UTC</div></div></div></body></html>
